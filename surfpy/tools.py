@@ -267,7 +267,7 @@ def download_with_retry(url):
 
     try:
         session = retry_session(retries=2)
-        response = session.get(url, timeout=5)
+        response = session.get(url, timeout=30)
     except Exception as e:
         print('Failed to download ' + url + ': ' + str(e))
         return None
